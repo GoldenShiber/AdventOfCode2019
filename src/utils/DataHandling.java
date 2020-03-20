@@ -1,10 +1,12 @@
 package utils;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class DataHandling {
+	
 	public static boolean isNumeric(String str) { 
 		  try {  
 		    Double.parseDouble(str);  
@@ -25,4 +27,9 @@ public class DataHandling {
             .collect(Collectors.toList()); 
     } 
 	
+    public static void printArrayList(ArrayList<String> list, int startindex, int endindex) {
+    	for (int i = startindex; i < endindex; i++) {
+    		System.out.println(list.get(i));
+    	}
+    }
 }
